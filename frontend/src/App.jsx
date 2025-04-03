@@ -1,8 +1,15 @@
 import { useState } from 'react'
 
-
+const apiUrl = import.meta.env.VITE_API_URL;
 function App() {
   const [count, setCount] = useState(0)
+
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    fetch(apiUrl)
+    .then((res) => res.json().then((data) => setMessage(data.message)))
+  })
 
   return (
     <>
