@@ -8,6 +8,7 @@ function App() {
     <>
       <h1>MERN-base-2</h1>
       <div className="card">
+        <h1>{message}</h1>
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
